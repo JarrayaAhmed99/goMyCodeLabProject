@@ -1,0 +1,24 @@
+version: '3'
+services:
+  angular:
+    container_name: angular
+    build:
+      context: ./angular-app
+    ports:
+      - "4200:80"
+
+  node:
+     container_name: node
+     build:
+      context: ./express-server
+     links:
+       - database
+     ports:
+       - "3000:3000"   
+  database:
+     container_name: mongodb
+     image: mongo
+     ports:
+      - "27017:27017"     
+ 
+           
