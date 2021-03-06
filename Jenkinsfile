@@ -5,6 +5,7 @@ pipeline
 
   stages {
 
+
     stage('Checkout Source')
     {
       steps {
@@ -12,6 +13,20 @@ pipeline
             }
     
     }
-         }
+  
+     stage("Build image") {
+            steps {
+                script {
+                    myapp = docker.build("vamsijakkula/hellowhale:${env.BUILD_ID}")
+                }
+            }
+        }
+    
+    
+    
+    
+    
+  
+  }
 
 }
