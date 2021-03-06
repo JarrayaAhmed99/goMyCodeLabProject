@@ -21,7 +21,9 @@ pipeline
      stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("jarrayaahmed99/projet:${env.BUILD_ID}")
+                    
+                    def front = docker.build("gomycodelabproject_angular:${env.BUILD_ID}"
+                                             
                 }
             }
         }
