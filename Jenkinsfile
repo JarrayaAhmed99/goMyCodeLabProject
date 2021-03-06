@@ -22,7 +22,7 @@ pipeline
             steps {
                 script {
                     
-                    def front = docker.build("gomycodelabproject_angular:${env.BUILD_ID}"
+                    def front = docker.build("gomycodelabproject_angular:${env.BUILD_ID}")
                                              
                 }
             }
