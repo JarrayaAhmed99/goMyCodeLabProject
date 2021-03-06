@@ -1,9 +1,13 @@
 pipeline 
-{
+{ environment {
+    registry = "jarrayaahmed99/projet"
+    registryCredential = '9632587410Mawi'
+              }
 
   agent any
 
   stages {
+    
 
 
     stage('Checkout Source')
