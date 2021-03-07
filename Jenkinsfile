@@ -25,7 +25,7 @@ pipeline
             steps {
                 script {
                     
-               angular= docker.build registry1 + ":$BUILD_NUMBER"
+                    angular= docker.build(registry1+":${env.BUILD_ID}", "-f ${env.WORSPACE}/angular-app/Dockerfile .")
                                              
                 }
             }
