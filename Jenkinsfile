@@ -19,7 +19,29 @@ pipeline
         git url:'https://github.com/JarrayaAhmed99/goMyCodeLabProject.git', branch:'main'
             }
     
+          stage('pwd')
+    {
+      steps {
+        sh'pwd'
+            }
+        
     }
+         
+          stage('tree ')
+    {
+      steps {
+        sh'tree -d'
+            }
+        
+    }
+             stage('lsah')
+    {
+      steps {
+        sh'ls -ah'
+            }
+        
+    }
+                
   
      stage("Build image") {
             steps {
