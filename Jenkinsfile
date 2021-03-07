@@ -1,8 +1,9 @@
 pipeline 
 { environment {
-    registry1 = "jarrayaahmed99/im1"
-    registry2 = "jarayaahmed99/im2"
+    registry1 = "jarrayaahmed99/frontimage"
+    registry2 = "jarayaahmed99/backimage"
     registryCredential = 'dockerhub'
+    angular= ''
     
               }
 
@@ -24,7 +25,7 @@ pipeline
             steps {
                 script {
                     
-                    def front = docker.build("gomycodelabproject_angular:${env.BUILD_ID}")
+               angular= docker.build registry1 + ":$BUILD_NUMBER"
                                              
                 }
             }
