@@ -36,6 +36,18 @@ pipeline
             }
         
     }
+      
+      
+       stage("Build image express") {
+            steps {
+                script {
+                    
+                    express= docker.build(registry2+":${env.BUILD_ID}", "-f ${env.WORKSPACE}/angular-app/Dockerfile .")
+                                             
+                }
+            }
+        }
+    
                 
   
      stage("Build image") {
