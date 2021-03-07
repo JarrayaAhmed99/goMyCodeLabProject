@@ -28,13 +28,7 @@ pipeline
         
     }
          
-          stage('tree ')
-    {
-      steps {
-        sh'tree'
-            }
-        
-    }
+   
              stage('lsah')
     {
       steps {
