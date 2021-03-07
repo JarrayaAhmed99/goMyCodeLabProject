@@ -19,6 +19,7 @@ pipeline
         git url:'https://github.com/JarrayaAhmed99/goMyCodeLabProject.git', branch:'main'
             }
     
+    }
           stage('pwd')
     {
       steps {
