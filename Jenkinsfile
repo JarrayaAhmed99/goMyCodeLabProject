@@ -31,7 +31,7 @@ pipeline
           stage('tree ')
     {
       steps {
-        sh'tree -d'
+        sh'tree'
             }
         
     }
