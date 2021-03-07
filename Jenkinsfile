@@ -4,6 +4,7 @@ pipeline
     registry2 = "jarayaahmed99/backimage"
     registryCredential = 'dockerhub'
     angular= ''
+    express= ''
     
               }
 
