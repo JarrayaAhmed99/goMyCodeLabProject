@@ -74,6 +74,7 @@ pipeline
              }
              }
           }
+      }
         stage ("pushing express image to dockerhub")
       {
           steps {
@@ -85,10 +86,11 @@ pipeline
              }
              }
           }
+      }
     
     
     
   
   }
-      } } }
+      } }
 
