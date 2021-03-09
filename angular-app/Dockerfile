@@ -1,7 +1,7 @@
 #app debuging
 FROM node:latest as node
 WORKDIR /app
-COPY ./package.json /app
+COPY package.json /app
 RUN npm install
 COPY . /app
 #app deployment 
