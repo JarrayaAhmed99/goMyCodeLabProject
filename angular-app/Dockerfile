@@ -1,9 +1,9 @@
 #app debuging
 FROM node:latest as node
 WORKDIR /app
-COPY package.json /app
+COPY ./angular-app/package.json .
 RUN npm install
-COPY . .
+COPY ./angular-app/ .
 RUN npm run build --prod
 #app deployment 
 FROM nginx:alpine
