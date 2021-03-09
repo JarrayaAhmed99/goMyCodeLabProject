@@ -2,7 +2,7 @@ pipeline
 { environment {
     registry1 = "jarrayaahmed99/frontimage"
     registry2 = "jarayaahmed99/backimage"
-    DockerCredentials = 'dockerhub'
+    DockerCredentials = 'dockerpassword'
     angular= ''
     express= ''
     
