@@ -80,7 +80,7 @@ pipeline
           steps {
               script
              {
-          docker.withRegistry( '', DockerCredentials ) {
+          docker.withRegistry( '', DockerCredentials) {
             express.push(env.BUILD_ID)
             express.push("latest")
              }
