@@ -82,7 +82,7 @@ pipeline
               scritpt
              {
           docker.withRegistry( '', DockerCredentials ) {
-            expree.push(env.BUILD_ID)
+            express.push(env.BUILD_ID)
             express.push("latest")
              }
              }
@@ -92,6 +92,7 @@ pipeline
     
   
   }
+      }
 
 
   
