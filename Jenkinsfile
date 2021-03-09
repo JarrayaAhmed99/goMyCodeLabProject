@@ -77,7 +77,7 @@ pipeline
         stage ("push express image to dockerhub")
       {
           steps {
-              scritpt
+              script
              {
           docker.withRegistry( '', DockerCredentials ) {
             express.push(env.BUILD_ID)
