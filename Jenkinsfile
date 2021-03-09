@@ -65,7 +65,7 @@ pipeline
                 }
             }
         }
-    stage ("push angular image to dockerhub")
+    stage ("pushing angular image to dockerhub")
       { steps {
               script {
           docker.withRegistry( '', DockerCredentials) {
@@ -74,7 +74,7 @@ pipeline
              }
              }
           }
-        stage ("push express image to dockerhub")
+        stage ("pushing express image to dockerhub")
       {
           steps {
               script
