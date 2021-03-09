@@ -67,7 +67,7 @@ pipeline
         }
     stage ("push angular image to dockerhub")
       { steps {
-              scritpt {
+              script {
           docker.withRegistry( '', DockerCredentials) {
             angular.push(env.BUILD_ID)
             angular.push("latest")
