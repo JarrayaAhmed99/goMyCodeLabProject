@@ -2,7 +2,7 @@ pipeline
 { environment {
     registry1 = "jarrayaahmed99/frontimage"
     registry2 = "jarayaahmed99/backimage"
-    registryCredential = 'dockerhub'
+    DockerCredentials = 'dockerhub'
     angular= ''
     express= ''
     
@@ -65,8 +65,28 @@ pipeline
                 }
             }
         }
-    
-    
+    stage ("push angular image to dockerhub")
+      {
+          steps {
+              scritpt
+             {
+          docker.withRegistry( '', DockerCredentials) {
+            angular.push(env.BUILD_ID)
+            angular.push("latest")
+             }
+             }
+          }
+        stage ("push express image to dockerhub")
+      {
+          steps {
+              scritpt
+             {
+          docker.withRegistry( '', DockerCredentials ) {
+            expree.push(env.BUILD_ID)
+            express.push("latest")
+             }
+             }
+          }
     
     
     
