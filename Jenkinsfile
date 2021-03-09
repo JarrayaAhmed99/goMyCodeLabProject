@@ -40,13 +40,6 @@ pipeline
       
       
       
-             stage('sleep')
-    {
-      steps {
-        sh'sleep 60000'
-            }
-        
-    }
       
       
        
