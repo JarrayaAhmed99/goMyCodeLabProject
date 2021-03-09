@@ -46,7 +46,7 @@ pipeline
     
                 
   
-     stage("Build image") {
+     stage("Build image angular") {
             steps {
                 script {
                     
