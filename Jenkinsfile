@@ -1,19 +1,14 @@
 pipeline 
 { environment {
     registry1 = "jarrayaahmed99/frontimage"
-    registry2 = "jarayaahmed99/backimage"
+    registry2 = "jarrayaahmed99/backimage"
     registryCredential = 'dockerpassword'
     angular= ''
     express= ''
-    
-              }
-
-  agent any
+         }
+agent any
 
   stages {
-    
-
-
     stage('Checkout Source')
     {
       steps {
@@ -28,23 +23,13 @@ pipeline
             }
         
     }
-         
-   
-             stage('lsah')
+        stage('lsah')
     {
       steps {
         sh'ls -ah'
             }
         
-    }
-      
-      
-      
-      
-      
-       
-    
-                
+    }            
   
      stage("Build image angular") {
             steps {
@@ -88,9 +73,6 @@ pipeline
           }
       }
     
-    
-    
-  
   }
       } 
 
