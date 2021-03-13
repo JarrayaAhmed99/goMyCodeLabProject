@@ -50,7 +50,7 @@ pipeline
             steps {
                 script {
                     
-                    angular= docker.build(registry1+":${env.BUILD_ID}", "-f ${env.WORKSPACE}/angular-app/Dockerfile .")
+                    angular= docker.build(registry1 , "-f ${env.WORKSPACE}/angular-app/Dockerfile .")
                                              
                 }
             }
@@ -60,7 +60,7 @@ pipeline
             steps {
                 script {
                     
-                    express= docker.build(registry2+":${env.BUILD_ID}", "-f ${env.WORKSPACE}/express-server/Dockerfile .")
+                    express= docker.build(registry2 , "-f ${env.WORKSPACE}/express-server/Dockerfile .")
                                              
                 }
             }
